@@ -38,23 +38,23 @@ source .devops/bin/activate
 
 2. ## Installations Required
 
-## Install Kubernetes
-## Connect to Your Cloud9 Environment:
-## Open your AWS Cloud9 environment and access the terminal.
+### Install Kubernetes
+### Connect to Your Cloud9 Environment:
+### Open your AWS Cloud9 environment and access the terminal.
 
-## Download kubectl Binary:
-## Download the kubectl binary from the official Kubernetes GitHub repository:
+### Download kubectl Binary:
+### Download the kubectl binary from the official Kubernetes GitHub repository:
 
 wget https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-## This command fetches the latest stable kubectl binary for Linux.
+### This command fetches the latest stable kubectl binary for Linux.
 
-## Make kubectl Executable:
-## Make the kubectl binary executable:
+### Make kubectl Executable:
+### Make the kubectl binary executable:
 
 chmod +x kubectl
 
-## Move kubectl to a Directory in the PATH:
-## Move the kubectl binary to a directory that is included in your PATH. For example, move it to /usr/local/bin:
+### Move kubectl to a Directory in the PATH:
+### Move the kubectl binary to a directory that is included in your PATH. For example, move it to /usr/local/bin:
 
 sudo mv kubectl /usr/local/bin/
 ## This command moves the kubectl binary to /usr/local/bin, which is typically in the PATH.
