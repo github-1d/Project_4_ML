@@ -4,7 +4,7 @@ FROM python:3.7.3-stretch
 WORKDIR /app
 
 ## Step 2:
-COPY app.py /app/
+COPY . app.py /app/
 
 ## Step 3:
 # Install packages from requirements.txt
