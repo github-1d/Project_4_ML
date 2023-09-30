@@ -57,23 +57,23 @@ chmod +x kubectl
 * Move the kubectl binary to a directory that is included in your PATH. For example, move it to /usr/local/bin:
 
 sudo mv kubectl /usr/local/bin/
-## This command moves the kubectl binary to /usr/local/bin, which is typically in the PATH.
+* This command moves the kubectl binary to /usr/local/bin, which is typically in the PATH.
 
-## Verify kubectl Installation:
-## Verify that kubectl is installed correctly by checking its version:
+* Verify kubectl Installation:
+* Verify that kubectl is installed correctly by checking its version:
 
 kubectl version --client
 
-## Install Minikube
+* Install Minikube
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-## Make the Minikube binary executable:
+* Make the Minikube binary executable:
 
 chmod +x minikube-linux-amd64
-## Move the Minikube binary to a directory included in your PATH (e.g., /usr/local/bin):
+* Move the Minikube binary to a directory included in your PATH (e.g., /usr/local/bin):
 
 sudo mv minikube-linux-amd64 /usr/local/bin/minikube
-## Verify Minikube Installation:
-## Verify that Minikube is installed correctly by checking its version:
+* Verify Minikube Installation:
+* Verify that Minikube is installed correctly by checking its version:
 
 minikube version
 
