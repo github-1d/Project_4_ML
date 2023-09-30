@@ -1,1 +1,34 @@
-<paste log output from Kubernetes-mediated prediction, here>
+C:\Monika\Project_4_ML (main -> origin)
+λ sh run_kubernetes.sh
+Authenticating with existing credentials...
+Login Succeeded
+
+Logging in with your password grants your terminal complete access to your account.
+For better security, log in with a limited-privilege personal access token. Learn more at https://docs.docker.com/go/access-tokens/
+Error from server (AlreadyExists): pods "ml-flask-app" already exists
+NAME           READY   STATUS    RESTARTS   AGE
+ml-flask-app   1/1     Running   0          8m34s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+C:\Monika\Project_4_ML (main -> origin)
+λ sh make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
+C:\Monika\Project_4_ML (main -> origin)
+λ sh make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
