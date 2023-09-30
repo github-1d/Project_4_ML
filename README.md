@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/github-1d/Project_4_ML/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/github-1d/Project_4_ML/tree/main)
 
 ## Project Overview
 
@@ -23,7 +23,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ---
 
-## Setup the Environment
+1. ## Setup the Environment
 
 * Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
 ```bash
@@ -36,15 +36,60 @@ source .devops/bin/activate
 ```
 * Run `make install` to install the necessary dependencies
 
-### Running `app.py`
+2. ## Installations Required
+
+## Install Kubernetes
+## Connect to Your Cloud9 Environment:
+## Open your AWS Cloud9 environment and access the terminal.
+
+## Download kubectl Binary:
+## Download the kubectl binary from the official Kubernetes GitHub repository:
+
+wget https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+## This command fetches the latest stable kubectl binary for Linux.
+
+## Make kubectl Executable:
+## Make the kubectl binary executable:
+
+chmod +x kubectl
+
+## Move kubectl to a Directory in the PATH:
+## Move the kubectl binary to a directory that is included in your PATH. For example, move it to /usr/local/bin:
+
+sudo mv kubectl /usr/local/bin/
+## This command moves the kubectl binary to /usr/local/bin, which is typically in the PATH.
+
+## Verify kubectl Installation:
+## Verify that kubectl is installed correctly by checking its version:
+
+kubectl version --client
+
+## Install Minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+## Make the Minikube binary executable:
+
+chmod +x minikube-linux-amd64
+## Move the Minikube binary to a directory included in your PATH (e.g., /usr/local/bin):
+
+sudo mv minikube-linux-amd64 /usr/local/bin/minikube
+## Verify Minikube Installation:
+## Verify that Minikube is installed correctly by checking its version:
+
+minikube version
+
+### Running Application
 
 1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
+2. Run in Docker:  `./run_docker.sh` to containerise app in docker
+3. Run './make_prediction.sh' to test predictions in docker
 
 ### Kubernetes Steps
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+4. Run './upload_docker.sh' to upload docker image
+5. Run minikube start to configure minikube
+6. Run './run_kubernetes.sh' to deploy kubernetes
+7. Run './make_prediction.sh' to test predictions once pod is running
+
+## Clean up
+
+1. Run minikube delete to clean the cluster
